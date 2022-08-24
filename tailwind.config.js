@@ -20,7 +20,11 @@ module.exports = {
         lg: '0',
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        b1: "#202124"
+      }
+    },
   },
   plugins: [],
 }
