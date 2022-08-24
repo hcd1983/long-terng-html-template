@@ -4,19 +4,19 @@ module.exports = {
     "./src/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
-    // screens: {
-    //   sm: '640px',
-    //   // => @media (min-width: 640px) { ... }
-    //   lg: '1024px',
-    //   // => @media (min-width: 1024px) { ... }
-    //   xl: '1280px',
-    //   // => @media (min-width: 1280px) { ... }
-    // },
+    screens: {
+      md: '768px',
+      // => @media (min-width: 640px) { ... }
+      // lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
     container: {
       center: true,
       padding: {
         DEFAULT: '1.5rem',
-        md: '0',
+        sm: '0',
         lg: '0',
       },
     },
@@ -25,6 +25,7 @@ module.exports = {
         b1: "#202124",
         b2: "#EDEEEF",
         c1: "#194B6D",
+        l1: "#C4C4C4",
       }
     },
   },
