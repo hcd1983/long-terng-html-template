@@ -1,0 +1,44 @@
+{
+  "name": "parecl-with-tailwindcss",
+  "version": "1.0.0",
+  "description": "quick start for develop",
+  "source": ["./src/index.html", "./src/example.html"],
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    },
+    "dev": {
+      "distDir": "./dev"
+    }
+  },
+  "scripts": {
+    "start": "parcel --dist-dir dev",
+    "build": "parcel build",
+    "watch": "parcel watch \"./src/**/*.html\" --target dev --no-cache",
+    "prod": "parcel build \"./src/**/*.html\" --no-cache --no-source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcd1983/parecl-with-tailwindcss.git"
+  },
+  "keywords": [
+    "parcel",
+    "tailwindcss"
+  ],
+  "author": "Dean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hcd1983/parecl-with-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/hcd1983/parecl-with-tailwindcss#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
