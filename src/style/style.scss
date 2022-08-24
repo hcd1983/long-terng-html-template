@@ -1,6 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  font-size: calc(100vw * 16/375);
+}
+
+@screen lg {
+  html {
+    font-size: calc(100vw * 16/1024);
+  }
+}
+
+@screen xl {
+  html {
+    font-size: calc(100vw * 16/1920);
+  }
+}
 
 body {
   a {
