@@ -1,14 +1,21 @@
-<header class="w-full fixed top-0 h-14 flex items-center justify-center z-50">
+<header
+    class="w-full fixed top-0 h-14 flex items-center justify-center z-30 transition-colors duration-300"
+    @vue:mounted="menuInit($el)"
+>
     <div class="container flex justify-between">
-        <a class="to-do" href="index.html">
+        <a class="to-do" href="index.html" @click.prevent="alertMe">
             <div>Logo</div>
         </a>
-        <button>
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-        </button>
     </div>
 </header>
+<button class="hamburger-lines !fixed top-0 right-0 h-14 right-5" @click="mobileMenuActive = !mobileMenuActive" :class="`${mobileMenuActive ? 'active' : ''}`">
+    <span class="line line1"></span>
+    <span class="line line2"></span>
+    <span class="line line3"></span>
+</button>
+<nav
+    class="mobile-menu fixed w-full h-screen overflow-y-auto bg-c2 z-40 duration-1000 pl-11 pt-24 pb-16"
+    :class="`${mobileMenuActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`"
+>
+    <div class="to-do h-[120vh]">Menu item</div>
+</nav>

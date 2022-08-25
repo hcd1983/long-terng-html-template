@@ -33,13 +33,14 @@ body{
 
 // burger icon
 .hamburger-lines {
+  @apply z-50;
   position: relative;
   width: 1.375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .line {
-    @apply absolute top-0 left-0 bg-b1;
+    @apply absolute top-1/2 left-0 bg-b1;
     display: block;
     height: 1px;
     width: 100%;
@@ -56,7 +57,10 @@ body{
     @apply translate-y-2;
     transition: transform 0.4s ease-in-out;
   }
-  &:hover {
+  &.active {
+    .line {
+      @apply bg-white;
+    }
     .line1 {
       @apply translate-y-0;
       transform: rotate(45deg);

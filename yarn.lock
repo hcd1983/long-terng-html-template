@@ -1509,6 +1509,11 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+petite-vue@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/petite-vue/-/petite-vue-0.4.1.tgz#122a6f4f1f86527e7d584ed805573597213208c4"
+  integrity sha512-/gtYKQe9r1OV4IEwn2RsPXAHgFTe1nVq4QhldAP6/l8DSe9I754K6Oe1+Ff6dbnT5P8X2XP7PTUZkGRz5uFnFQ==
+
 picocolors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
