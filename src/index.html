@@ -1,26 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
+    <include src="./src/components/head-meta.html"></include>
     <title>Title</title>
-    <link rel="stylesheet" href="./style/style.scss">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <include src="./src/components/header.html"></include>
-<section class="bg-b2 pt-14 flex pb-[4.3rem] border-b border-l1">
+<!--section title-->
+<section class="bg-b2 pt-16 flex pb-[4.3rem]">
     <div class="w-[2.875rem] flex items-end">
-        <div class="bg-red-500">down animation</div>
+        <div class="to-do">down animation</div>
     </div>
-    <div class="relative flex-1 h-[calc(100vh-4rem)]">
-        <img src="https://source.unsplash.com/random/?house" class="w-full h-full object-cover" />
-        <div class="absolute bottom-0 flex justify-center w-0 left-1/2 whitespace-nowrap">
+    <div class="relative flex-1 h-[calc(100vh-4rem)] flex items-center justify-center">
+        <img src="https://source.unsplash.com/random/?house" class="overlay object-cover" />
+        <div class="relative z-10">
+            <h1 class="head-title text-white text-center">
+                THE BUILDER<br/>
+                OF<br/>
+                EVERY<br/>
+                <strong>DREAM HOME</strong>
+            </h1>
+        </div>
+        <div class="absolute -bottom-[1px] flex justify-center w-0 left-1/2 whitespace-nowrap">
             <div class="bg-b2 border-b border-b2 flex items-center justify-center text-c1 py-3 px-11 text-xs tracking-[0.1rem] font-medium">誠摯為每個家庭築夢</div>
         </div>
     </div>
 </section>
-<a href="./example.html">example1</a>
-<img src="https://source.unsplash.com/random/?house" />
-<script src="./app.js" />
+<!--section two slider-->
+<section class="bg-b2 pt-10 border-t border-l1">
+    <div class="to-do h-[20rem]">slider</div>
+    <a class="section-bottom-btn">MORE DETAILS</a>
+</section>
+<!--section three news-->
+<section class="bg-white pt-16 pb-16">
+    <div class="container">
+        <h3 class="section-title">News<span class="to-do title-num">02</span></h3>
+        <h4 class="section-sub">最新消息</h4>
+        <div class="news-filter flex flex-wrap gap-3 mt-6">
+            <button class="white-btn active">ALL</button>
+            <button class="white-btn">NEWS</button>
+            <button class="white-btn">MEDIA</button>
+        </div>
+        <ul class="news-list mt-6">
+            <li>
+                <a hrf="#">
+                    <div class="info">
+                        <div class="date-tag">
+                            <div>2022.01.28</div>
+                            <div>NEWS</div>
+                        </div>
+                        <h4>虎虎生風 龍騰建設祝您新年快樂</h4>
+                    </div>
+                    <div class="action">
+                        <div class="to-do">-></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a hrf="#">
+                    <div class="info">
+                        <div class="date-tag">
+                            <div>2022.01.28</div>
+                            <div>NEWS</div>
+                        </div>
+                        <h4>205 兵工廠遷廠區段徵收計畫 內政部審議通過</h4>
+                    </div>
+                    <div class="action">
+                        <div class="to-do">-></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a hrf="#">
+                    <div class="info">
+                        <div class="date-tag">
+                            <div>2022.01.28</div>
+                            <div>NEWS</div>
+                        </div>
+                        <h4>集盒 KUBIC 聚落亮麗登場</h4>
+                    </div>
+                    <div class="action">
+                        <div class="to-do">-></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="view-all-btn mt-9">VIEW ALL</a>
+    </div>
+</section>
+<include src="./src/components/footer.html"></include>
+<script src="./app.js" type="module"  />
 </body>
 </html>
