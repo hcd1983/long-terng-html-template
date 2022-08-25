@@ -38,6 +38,10 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
   @apply absolute w-full h-full inset-0;
 }
 
+.cover-image {
+  @apply w-full h-full object-cover;
+}
+
 // burger icon
 .hamburger-lines {
   @apply z-50;
@@ -85,9 +89,21 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
 // head title
 .head-title {
   @apply font-rc font-light text-4xl leading-[2.875rem] tracking-[0.03rem];
+  &.smaller {
+    @apply text-[2rem];
+  }
   strong {
     @apply font-bold;
   }
+}
+
+.page-title {
+  @apply font-rc font-bold text-lg tracking-wide;
+}
+
+.about-title {
+  @extend .head-title;
+  @apply text-xl leading-[1.75rem];
 }
 
 //section-bottom-btn 白色方格子按鈕
@@ -120,5 +136,13 @@ ul.news-list {
     h4 {
       @apply tracking-[0.02rem] text-b3 text-sm;
     }
+  }
+}
+
+//slogan
+.slogan {
+  @apply bg-b2 border-b border-b2 flex items-center justify-center text-c1 py-3 px-11 text-xs tracking-[0.1rem] font-medium;
+  &.dark {
+    @apply bg-c2 border-c2 text-white;
   }
 }

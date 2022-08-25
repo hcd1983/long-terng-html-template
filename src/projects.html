@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <include src="./src/components/head-meta.html"></include>
+    <title>Title</title>
+</head>
+<body v-scope>
+<include src="./src/components/header.html"></include>
+<!--section title-->
+<section class="bg-b2 pt-[6.75rem] pb-12">
+    <div class="flex relative w-full">
+        <div class="relative flex items-end left-6 gap-12">
+            <div class="page-title text-b1 -translate-y-2">PROJECTS</div>
+            <h1 class="head-title text-b1 smaller">
+                BUILD A<br/>
+                DREAM FOR<br/>
+                <strong>EVERYFAMILY</strong>
+            </h1>
+        </div>
+    </div>
+    <div class="container mt-[5.5rem]">
+        <div class="grid grid-cols-3 gap-3">
+            <button class="white-btn-small w-full active" >ALL</button>
+            <button class="white-btn-small w-full" >熱銷個案</button>
+            <button class="white-btn-small w-full" >經典業績</button>
+        </div>
+        <include src="./src/components/search-form.html"></include>
+    </div>
+</section>
+<include src="./src/components/footer.html"></include>
+<script src="./app.js" type="module"  />
+</body>
+</html>

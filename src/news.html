@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <include src="./src/components/head-meta.html"></include>
+    <title>Title</title>
+</head>
+<body v-scope>
+<include src="./src/components/header.html"></include>
+<!--section title-->
+<section class="bg-b2 pt-[6.75rem] pb-12">
+    <div class="flex relative w-full">
+        <div class="relative flex items-end left-6 gap-[5.375rem]">
+            <div class="page-title text-b1 -translate-y-2">NEWS</div>
+            <h1 class="head-title text-b1 smaller">
+                HANG ON TO<br/>
+                YOUR <strong>DREAMS</strong>
+            </h1>
+        </div>
+    </div>
+    <div class="container mt-[5.5rem]">
+        <div class="grid grid-cols-3 gap-3">
+            <button class="white-btn-small w-full active" >ALL</button>
+            <button class="white-btn-small w-full" >NEWS</button>
+            <button class="white-btn-small w-full" >MEDIA</button>
+        </div>
+        <include src="./src/components/search-form.html"></include>
+    </div>
+</section>
+<include src="./src/components/footer.html"></include>
+<script src="./app.js" type="module"  />
+</body>
+</html>

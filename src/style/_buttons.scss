@@ -1,10 +1,15 @@
 // buttons
 // white button
 .white-btn {
-  @apply py-2.5 px-4 text-b3 font-rc border-b3 border rounded-lg flex items-center justify-center;
+  @apply py-2.5 px-4 text-b3 font-rc border-b3 border rounded-lg flex items-center justify-center text-sm;
   &.active {
     @apply text-white bg-c1 border-c1;
   }
+}
+
+.white-btn-small {
+  @extend .white-btn;
+  @apply py-2;
 }
 
 // 首頁下面的按鈕

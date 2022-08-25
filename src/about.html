@@ -7,29 +7,53 @@
 <body v-scope>
 <include src="./src/components/header.html"></include>
 <!--section title-->
-<section class="bg-b2 pt-16 flex pb-[4.3rem]">
-    <div class="w-[2.875rem] flex items-end">
-        <div class="to-do">down animation</div>
-    </div>
-    <div class="relative flex-1 h-[calc(100vh-4rem)] flex items-center justify-center">
-        <img src="https://source.unsplash.com/random/?house" class="overlay object-cover" />
-        <div class="relative z-10">
-            <h1 class="head-title text-white text-center">
-                THE BUILDER<br/>
-                OF<br/>
-                EVERY<br/>
-                <strong>DREAM HOME</strong>
+<section class="bg-c2">
+    <div class="flex relative w-full">
+        <div class="w-[2.875rem] flex items-end"></div>
+        <div class="relative flex-1 h-[27rem]">
+            <img src="https://source.unsplash.com/random/?city" class="overlay object-cover" loading="eager" />
+            <div class="absolute -bottom-[1px] flex justify-center w-0 left-1/2 whitespace-nowrap">
+                <div class="slogan dark">創新　承諾　不忘初衷</div>
+            </div>
+        </div>
+        <div class="absolute flex items-end left-6 top-36 gap-[4.625rem]">
+            <div class="page-title text-white -translate-y-2">ABOUT</div>
+            <h1 class="head-title text-white smaller">
+                SERIOUS<br/>
+                <strong>COMMITMENT</strong>
             </h1>
         </div>
-        <div class="absolute -bottom-[1px] flex justify-center w-0 left-1/2 whitespace-nowrap">
-            <div class="slogan">誠摯為每個家庭築夢</div>
+    </div>
+    <div class="flex justify-between mt-10">
+       <div class="w-[9.7rem] h-[7.2rem]">
+           <img src="https://source.unsplash.com/random/?boy" class="cover-image" loading="lazy" />
+       </div>
+       <div class="w-[9.375rem] h-[9.375rem] pt-3">
+           <img src="https://source.unsplash.com/random/?girl" class="cover-image" loading="lazy" />
+       </div>
+    </div>
+    <div class="flex items-end mt-5">
+        <div class="w-[17.8rem] h-[11.25rem] relative">
+            <img src="https://source.unsplash.com/random/?man" class="cover-image" loading="lazy" />
+            <h3 class="about-title text-white absolute top-16 -right-6">
+                LASTING<br/>
+                <strong>FOREVER</strong>
+            </h3>
         </div>
+        <div class="bg-white h-9 flex-1"></div>
     </div>
 </section>
 <!--section two slider-->
-<section class="bg-b2 pt-10 border-t border-l1">
-    <div class="to-do h-[20rem]">slider</div>
-    <a class="section-bottom-btn">MORE DETAILS</a>
+<section class="bg-white pt-12">
+    <div class="container">
+        <h3 class="section-title">History<span class="to-do title-num">02</span></h3>
+        <h4 class="section-sub">公司沿革</h4>
+        <section>
+            <h3>光陰會流逝　建築卻能永恆<br/>
+                天玉集團將建築夢想流傳世界各地</h3>
+            <p>龍騰建設自1997年成立至今，秉持嚴謹態度，承諾以最新、最好的工程技術打造頂尖建築，而專業、品質、服務一直是我們堅持的核心理念，期盼打造美好居住空間，誠心誠意為每個家庭築夢。</p>
+        </section>
+    </div>
 </section>
 <!--section three news-->
 <section class="bg-white pt-16 pb-16">
