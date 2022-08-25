@@ -34,6 +34,7 @@ module.exports = {
         c1: "#194B6D",
         c2: "#2D3842",
         l1: "#C4C4C4",
+        footer: "#666666",
       }
     },
   },

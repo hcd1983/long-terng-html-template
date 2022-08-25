@@ -16,6 +16,9 @@ createApp({
                 el.classList.remove("bg-white")
             }
         })
+    },
+    handleContactFormSumbit(e) {
+       e.preventDefault()
+       console.log(e)
     }
-
 }).mount()

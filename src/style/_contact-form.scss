@@ -1,0 +1,21 @@
+.contact-form {
+  @apply text-[0.625rem];
+  .group-1, .group-2 {
+    @apply flex flex-col gap-5;
+  }
+  .group-1 > div, .group-2 > div {
+    @apply flex w-full items-center justify-start gap-3;
+    label{
+      @apply w-[3.375rem];
+    }
+    label + div {
+      @apply flex-1;
+      input {
+        @apply bg-transparent border-b border-footer w-full text-l1;
+      }
+    }
+  }
+  textarea {
+    @apply bg-transparent border border-footer w-full text-l1 h-24;
+  }
+}
