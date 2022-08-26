@@ -21,11 +21,20 @@ function arrBtn (props = {}) {
     }
 }
 
+// 斜線小數字
+function smallNum( num = '01' ) {
+    return {
+        $template: '#small_number',
+        num
+    }
+}
+
 
 createApp({
     count: 0,
     carousel,
     arrBtn,
+    smallNum,
    mobileMenuActive: false,
     alertMe() {
       alert('works')
