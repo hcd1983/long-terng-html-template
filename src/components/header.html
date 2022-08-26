@@ -3,8 +3,10 @@
     @vue:mounted="menuInit($el)"
 >
     <div class="container flex justify-between">
-        <a class="to-do" href="index.html" @click.prevent="alertMe">
-            <div>Logo</div>
+        <a href="index.html">
+            <div class="w-[6.875rem]">
+                <include src="./src/components/logo.html"></include>
+            </div>
         </a>
     </div>
 </header>
