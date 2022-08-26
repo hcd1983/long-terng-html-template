@@ -180,3 +180,25 @@ ul.news-list {
     }
   }
 }
+
+// news
+.news-grid {
+  .image-container {
+    @apply relative h-[13.75rem];
+    img {
+      @apply w-full h-full object-cover;
+    }
+    .tag {
+      @apply absolute text-b1 text-xs px-4 py-2 bottom-0 right-6 bg-white leading-none;
+    }
+  }
+  .info {
+    @apply mt-5;
+    h3{
+      @apply text-sm text-b1 tracking-widest;
+    }
+    .date {
+      @apply text-xs text-b3 tracking-widest mt-3;
+    }
+  }
+}
