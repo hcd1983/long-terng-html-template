@@ -149,3 +149,34 @@ ul.news-list {
     @apply bg-c2 border-c2 text-white;
   }
 }
+
+// projects
+.project-grid {
+  .image-container {
+    @apply relative h-[13.75rem];
+    img {
+      @apply w-full h-full object-cover;
+    }
+    .tag {
+      @apply absolute text-b1 text-xs px-4 py-2 bottom-0 right-6 bg-white leading-none;
+    }
+  }
+  .info {
+    @apply mt-4;
+    .title{
+      @apply flex items-end w-fit;
+      h3 {
+        @apply text-b1 text-xl tracking-widest leading-none;
+      }
+      div {
+        @apply ml-5 text-xs text-b1 leading-none;
+      }
+    }
+    .data {
+      @apply mt-3 text-b3 text-xs;
+      span {
+        @apply text-b1 ml-3 mr-2.5;
+      }
+    }
+  }
+}
