@@ -28,11 +28,26 @@
 </section>
 <!--section two slider-->
 <section class="bg-b2 pt-10 border-t border-l1">
-    <div class="container">
-        <h3 class="section-title">Projects<span class="small-num" v-scope="smallNum('01')"></span></h3>
-        <h4 class="section-sub">龍騰作品</h4>
-        <div class="to-do h-[20rem]">slider</div>
-        <a class="section-bottom-btn">MORE DETAILS</a>
+    <div v-scope="carousel()" @vue:mounted="mounted($el)">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="section-title">Projects<span class="small-num" v-scope="smallNum('01')"></span></h3>
+                    <h4 class="section-sub">龍騰作品</h4>
+                </div>
+                <div>
+                    <button v-scope="arrBtn({direction:'left'})" @click="prev" class="w-10 h-10"></button>
+                    <button :disabled="isLast()" v-scope="arrBtn({direction:'right'})" @click="next" class="w-10 h-10"></button>
+                </div>
+            </div>
+        </div>
+        <div class="container pr-0">
+            <div class="w-full mt-6 h-[14.6rem]">
+                <include src="./src/components/carousel.html"></include>
+            </div>
+            <div class="to-do h-[20rem] mt-7">slide Info</div>
+            <a class="section-bottom-btn">MORE DETAILS</a>
+        </div>
     </div>
 </section>
 <!--section three news-->

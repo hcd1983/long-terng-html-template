@@ -27,6 +27,9 @@
   }
 }
 
+button[disabled] {
+  @apply opacity-70 pointer-events-none;
+}
 svg.svg-arrow-btn {
   .arrow path {
     stroke:#202124;

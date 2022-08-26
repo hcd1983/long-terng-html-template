@@ -5,9 +5,19 @@
 @import "special";
 @import "contact-form";
 @import "buttons";
+@import "carousel";
 .to-do {
   @apply bg-red-500;
 }
+
+button, input[type=button] {
+  @apply outline-none focus:outline-none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 
 html {
   font-size: calc(100vw * 16/375);

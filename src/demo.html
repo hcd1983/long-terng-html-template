@@ -6,6 +6,17 @@
 </head>
 <body v-scope>
 <div class="relative w-screen h-screen items-center justify-center flex">
+
+  <div v-scope="carousel()" @vue:mounted="mounted($el)">
+    <div class="w-[300px] bg-gray-200">
+      <div class="w-[200px] bg-gray-100">
+        <include src="./src/components/carousel.html"></include>
+      </div>
+      <button v-scope="arrBtn({direction:'left'})" @click="prev" class="w-10 h-10"></button>
+      <button v-scope="arrBtn({direction:'right'})" @click="next" class="w-10 h-10"></button>
+    </div>
+  </div>
+
   <div v-scope="carousel()">
     {{ current }} / {{ total }} / {{ count }}
     <button v-scope="arrBtn({direction:'left'})" @click="count++" class="w-10 h-10"></button>

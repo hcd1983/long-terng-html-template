@@ -1,15 +1,55 @@
 import {createApp} from "petite-vue";
+import gsap from "gsap";
 import "./style/style.scss"
 
 // 全域使用 petite vue
 
 // 輪播圖
-function carousel (props) {
+function carousel () {
     return {
-        total: 5,
+        carouselEl: null,
+        container: null,
+        items: null,
+        total: 0,
         current:0,
+        isRunning: false,
+        isLast() {
+            return this.total && this.current === this.items.length - 1
+        },
         next() {
-            this.current ++
+            if (this.isRunning || this.current === this.items.length - 1) {
+                // backToZero()
+                return
+            }
+            this.isRunning = true
+            const currentItem = this.items[this.current]
+            const moveDistance = currentItem.getBoundingClientRect().width
+            gsap.to(this.container, {x: `-=${moveDistance}`}).then(() => {
+                this.current++
+                this.isRunning = false
+            })
+        },
+        prev() {
+            const {isRunning, current, items, container } = this
+            if (isRunning || current === 0) {
+                return
+            }
+            this.isRunning = true
+            const currentItem = items[current]
+            const lastItem = items[current - 1]
+            const moveDistance = lastItem.getBoundingClientRect().width
+            gsap.to(container, {x: `+=${moveDistance}`}).then(() => {
+                this.current--
+                this.isRunning = false
+            })
+        },
+        mounted($el) {
+            if (!$el) return
+            this.carouselEl = $el.querySelector("._carousel")
+            if (!this.carouselEl) return;
+            this.container = this.carouselEl.querySelector(".carousel-container")
+            this.items = this.container.querySelectorAll(":scope > .carousel-item")
+            this.total = this.items.length
         }
     }
 }
