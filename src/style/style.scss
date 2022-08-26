@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "header";
 @import "animation";
 @import "special";
 @import "contact-form";
@@ -59,50 +60,6 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
   @apply w-full h-full object-cover;
 }
 
-// burger icon
-.hamburger-lines {
-  @apply z-50;
-  position: relative;
-  width: 1.375rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .line {
-    @apply absolute top-1/2 left-0 bg-b1;
-    display: block;
-    height: 1px;
-    width: 100%;
-  }
-  .line1 {
-    @apply -translate-y-2;
-    transition: transform 0.4s ease-in-out;
-  }
-  .line2 {
-    transform-origin: right;
-    transition: transform 0.6s ease-in-out;
-  }
-  .line3 {
-    @apply translate-y-2;
-    transition: transform 0.4s ease-in-out;
-  }
-  &.active {
-    .line {
-      @apply bg-white;
-    }
-    .line1 {
-      @apply translate-y-0;
-      transform: rotate(45deg);
-    }
-    .line2 {
-      transform: scaleX(0);
-    }
-    .line3 {
-      @apply translate-y-0;
-      transform: rotate(-45deg);
-    }
-  }
-}
-
 // head title
 .head-title {
   @apply font-rc font-light text-4xl leading-[2.875rem] tracking-[0.03rem];
@@ -121,6 +78,10 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
 .about-title {
   @extend .head-title;
   @apply text-xl leading-[1.75rem];
+}
+
+.about-sp-title {
+  @apply bg-c2 py-3 pr-5 pl-[4.75rem] text-white w-fit;
 }
 
 //section-bottom-btn 白色方格子按鈕
@@ -151,7 +112,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
 }
 
 .sm-title {
-  @apply text-lg leading-[1.8rem] tracking-widest font-medium;
+  @apply text-xl leading-[1.8rem] tracking-widest font-medium;
 }
 
 .num-title {
@@ -173,7 +134,10 @@ ul.news-list {
       }
     }
     h4 {
-      @apply tracking-[0.02rem] text-b3 text-sm;
+      @apply tracking-wider text-b3 text-xs;
+    }
+    .action {
+      @apply pr-6;
     }
   }
 }

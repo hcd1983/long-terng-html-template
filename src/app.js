@@ -109,9 +109,9 @@ createApp({
     menuInit(el) {
         window.addEventListener("scroll", () => {
             if (window.scrollY > el.getBoundingClientRect().height) {
-                el.classList.add("bg-white")
+                el.classList.add("sticky-header")
             } else {
-                el.classList.remove("bg-white")
+                el.classList.remove("sticky-header")
             }
         })
     },

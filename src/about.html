@@ -4,8 +4,8 @@
     <include src="./src/components/head-meta.html"></include>
     <title>Title</title>
 </head>
-<body v-scope>
-<include src="./src/components/header.html"></include>
+<body v-scope class="light-header">
+<include src="./src/components/header-light.html"></include>
 <!--section title-->
 <section class="bg-c2">
     <div class="flex relative w-full">
@@ -44,76 +44,62 @@
     </div>
 </section>
 <!--section two slider-->
-<section class="bg-white pt-12">
+<section class="bg-white pt-12 pb-[3.125rem]">
     <div class="container">
-        <h3 class="section-title">History<span class="to-do title-num">02</span></h3>
+        <h3 class="section-title">History<span class="small-num" v-scope="smallNum('01')"></span></h3>
         <h4 class="section-sub">公司沿革</h4>
-        <section>
-            <h3>光陰會流逝　建築卻能永恆<br/>
+        <section class="mt-6 leading-8 text-c1 tracking-widest">
+            <h3 class="text-xl">光陰會流逝　建築卻能永恆<br/>
                 天玉集團將建築夢想流傳世界各地</h3>
-            <p>龍騰建設自1997年成立至今，秉持嚴謹態度，承諾以最新、最好的工程技術打造頂尖建築，而專業、品質、服務一直是我們堅持的核心理念，期盼打造美好居住空間，誠心誠意為每個家庭築夢。</p>
+            <p class="mt-4 text-justify">龍騰建設自1997年成立至今，秉持嚴謹態度，承諾以最新、最好的工程技術打造頂尖建築，而專業、品質、服務一直是我們堅持的核心理念，期盼打造美好居住空間，誠心誠意為每個家庭築夢。</p>
         </section>
-        <div v-for="i in 10">
-            {{ i }}
-        </div>
     </div>
 </section>
-<!--section three news-->
-<section class="bg-white pt-16 pb-16">
-    <div class="container">
-        <h3 class="section-title">News<span class="to-do title-num">02</span></h3>
-        <h4 class="section-sub">最新消息</h4>
-        <div class="news-filter flex flex-wrap gap-3 mt-6">
-            <button class="white-btn active">ALL</button>
-            <button class="white-btn">NEWS</button>
-            <button class="white-btn">MEDIA</button>
-        </div>
-        <ul class="news-list mt-6">
-            <li>
-                <a hrf="#">
-                    <div class="info">
-                        <div class="date-tag">
-                            <div>2022.01.28</div>
-                            <div>NEWS</div>
-                        </div>
-                        <h4>虎虎生風 龍騰建設祝您新年快樂</h4>
-                    </div>
-                    <div class="action">
-                        <div class="to-do">-></div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a hrf="#">
-                    <div class="info">
-                        <div class="date-tag">
-                            <div>2022.01.28</div>
-                            <div>NEWS</div>
-                        </div>
-                        <h4>205 兵工廠遷廠區段徵收計畫 內政部審議通過</h4>
-                    </div>
-                    <div class="action">
-                        <div class="to-do">-></div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a hrf="#">
-                    <div class="info">
-                        <div class="date-tag">
-                            <div>2022.01.28</div>
-                            <div>NEWS</div>
-                        </div>
-                        <h4>集盒 KUBIC 聚落亮麗登場</h4>
-                    </div>
-                    <div class="action">
-                        <div class="to-do">-></div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-        <a href="#" class="view-all-btn mt-9">VIEW ALL</a>
+<section class="bg-b2 border-b border-l1 pb-14">
+    <div class="container pr-0">
+        <img src="./assets/about-1.png" class="w-full max-w-none" loading="lazy" />
     </div>
+    <div class="container mt-8">
+        <h3 class="section-title">Philosophy<span class="small-num" v-scope="smallNum('02')"></span></h3>
+        <h4 class="section-sub">經營理念</h4>
+        <p class="mt-6 text-justify">龍騰建設自1997年成立至今，秉持嚴謹態度，承諾以最新、最好的工程技術打造頂尖建築，而專業、品質、服務一直是我們堅持的核心理念，期盼打造美好居住空間，誠心誠意為每個家庭築夢。</p>
+    </div>
+</section>
+<section class="bg-b2 pb-[4.75rem]">
+    <div class="container pr-0">
+        <img src="./assets/about-2.png" class="w-full max-w-none" loading="lazy" />
+    </div>
+    <div class="container mt-8">
+        <h3 class="section-title">Construction<span class="small-num" v-scope="smallNum('03')"></span></h3>
+        <h4 class="section-sub">紮實工法</h4>
+    </div>
+    <div class="mt-6">
+        <h3 class="about-sp-title">技藝一體的精實工法</h3>
+        <h3 class="mt-1.5 about-sp-title">台灣頂尖的建築領導。</h3>
+    </div>
+    <div class="container mt-6">
+        <p>擁有深厚的結構、人文、美學三項建築素養，對居住安全的講究與執著，逐層建起客戶託付的期盼；專業團隊是家的穩固靠山，以高標準要求工程細節，讓龍騰建築品牌扎下穩固的頂尖地位。</p>
+    </div>
+</section>
+<div class="flex">
+    <div class="w-[19.5rem] h-[21.75rem]">
+        <img src="https://source.unsplash.com/random/?boy" class="cover-image" loading="lazy" />
+    </div>
+    <div class="flex-1 flex flex-col justify-between">
+        <div class="h-6 bg-b2"></div>
+        <div class="h-[11rem] bg-c1"></div>
+    </div>
+</div>
+<section class="bg-c1 pt-10">
+    <div class="container">
+        <h3 class="section-title !text-white">Awards<span class="small-num white" v-scope="smallNum('04')"></span></h3>
+        <h4 class="section-sub !text-white">得獎榮耀</h4>
+        <h5 class="text-xl text-white tracking-widest leading-normal mt-6">榮獲多項業界殊榮<br/>
+            創造建築品質典範</h5>
+        <p class="text-white mt-3 text-justify">龍騰建設不僅擁有台灣誠信建商與ISO9002國際認證，更獲得傑出建築獎、建築金獅獎、建築園冶獎…等多項殊榮，一次又一次受到廣大消費者的好評讚譽，是龍騰優良建築品質的最佳肯定。</p>
+    </div>
+    <a class="section-bottom-btn">VIEW AWARDS</a>
+    <div class="bg-white w-full h-14"></div>
 </section>
 <include src="./src/components/footer.html"></include>
 <include src="./src/components/templates.html"></include>
