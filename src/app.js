@@ -1,10 +1,36 @@
 import {createApp} from "petite-vue";
 import "./style/style.scss"
+
+// 全域使用 petite vue
+
+// 輪播圖
+function carousel (props) {
+    return {
+        total: 5,
+        current:0,
+        next() {
+            this.current ++
+        }
+    }
+}
+// svg - 按鈕
+function arrBtn (props = {}) {
+    return {
+        $template: '#svg_arrow_button',
+        direction: props.direction || "right",
+    }
+}
+
+
 createApp({
+    count: 0,
+    carousel,
+    arrBtn,
    mobileMenuActive: false,
     alertMe() {
       alert('works')
     },
+    tester: ['A', 'B', 'C'],
     mounted() {
         document.body.classList.remove('opacity-0')
     },
@@ -22,3 +48,5 @@ createApp({
        console.log(e)
     }
 }).mount()
+
+

@@ -1,0 +1,19 @@
+<template id="svg_arrow_button">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 75 74" style="enable-background:new 0 0 75 74;" xml:space="preserve"
+         :class="`svg-arrow-btn ${direction === 'left' ? 'mirror' : ''}`"
+    >
+        <g class="circle">
+            <path style="stroke-miterlimit:10;" d="M37.4,73.3c20.1,0,36.4-16.3,36.4-36.4S57.5,0.5,37.4,0.5
+                S1,16.8,1,36.9S17.3,73.3,37.4,73.3z"/>
+        </g>
+        <g class="outline">
+            <path style="fill:none;stroke:#194B6D;stroke-miterlimit:999;" d="M37.4,0.5c6.2,0,12.3,1.6,17.7,4.6c5.4,3,10,7.4,13.2,12.7
+                c3.3,5.3,5.1,11.3,5.4,17.5c0.3,6.2-1.1,12.4-3.9,17.9"/>
+        </g>
+        <g class="arrow">
+            <path style="fill:none;stroke-miterlimit:10;" d="M26.4,36.8h21.9"/>
+            <path style="fill:none;stroke-miterlimit:10;" d="M43.1,31.6l5.2,5.2L43,42.2"/>
+        </g>
+    </svg>
+</template>

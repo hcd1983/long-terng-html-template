@@ -33,6 +33,11 @@
 </section>
 <!--section three news-->
 <section class="bg-white pt-16 pb-16">
+    <div v-scope="carousel()">
+        {{ current }} / {{ total }} / {{ count }}
+        <button v-scope="arrBtn({direction:'left'})" @click="count++" class="w-10 h-10"></button>
+        <button v-scope="arrBtn({direction:'right'})" @click="next" class="w-10 h-10"></button>
+    </div>
     <div class="container">
         <h3 class="section-title">News<span class="to-do title-num">02</span></h3>
         <h4 class="section-sub">最新消息</h4>
@@ -89,6 +94,7 @@
     </div>
 </section>
 <include src="./src/components/footer.html"></include>
+<include src="./src/components/templates.html"></include>
 <script src="./app.js" type="module"  />
 </body>
 </html>

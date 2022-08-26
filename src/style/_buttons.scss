@@ -26,3 +26,36 @@
     @apply min-w-[4.375rem] leading-none;
   }
 }
+
+svg.svg-arrow-btn {
+  .arrow path {
+    stroke:#202124;
+    transition: all .3s ease .2s;
+  }
+  .outline path {
+    transition: all 1s ease;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  .circle path {
+    fill: transparent;
+    stroke:#C4C4C4;
+    transition: all .3s ease .2s;
+  }
+  &:hover {
+    .outline path {
+      stroke-dashoffset: 0;
+    }
+    .circle path {
+      fill: #194B6D;
+      stroke: #194B6D;
+    }
+    .arrow path {
+      stroke: #ffffff;
+    }
+
+  }
+}
+
+
+
