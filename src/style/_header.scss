@@ -1,9 +1,15 @@
 
 // burger icon
 #header {
-  @apply w-full fixed top-0 h-14 flex items-center justify-center z-30 transition-colors duration-300 light-header;
+  @apply w-full fixed top-0 h-14 flex items-center justify-center z-30 transition-colors duration-300;
+  &:before{
+    @apply absolute w-full h-full top-0 left-0 bg-white transition-all duration-500 z-0 scale-y-0 origin-top;
+    content: "";
+  }
   &.sticky-header {
-    @apply bg-white;
+    &:before {
+      @apply scale-y-100;
+    }
   }
   &.light-header:not(.sticky-header) {
     svg.header-logo {
