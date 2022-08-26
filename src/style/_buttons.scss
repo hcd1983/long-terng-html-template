@@ -42,18 +42,34 @@ svg.svg-arrow-btn {
     stroke:#C4C4C4;
     transition: all .3s ease .2s;
   }
-  &:hover {
+  &:active {
     .outline path {
+      transition: none;
       stroke-dashoffset: 0;
     }
     .circle path {
+      transition: none;
       fill: #194B6D;
       stroke: #194B6D;
     }
     .arrow path {
+      transition: none;
       stroke: #ffffff;
     }
-
+  }
+  @media (hover: hover) {
+    &:hover {
+      .outline path {
+        stroke-dashoffset: 0;
+      }
+      .circle path {
+        fill: #194B6D;
+        stroke: #194B6D;
+      }
+      .arrow path {
+        stroke: #ffffff;
+      }
+    }
   }
 }
 

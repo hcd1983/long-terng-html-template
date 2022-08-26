@@ -5,3 +5,15 @@
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
+
+// scroll animation
+.scroll-down-icon {
+  @apply relative before:content-[''] after:content-[''];
+  &:before {
+    @apply relative bg-l1 h-[3.75rem] w-[0.0625rem] mx-auto block max-w-[1px] max-h-[90px];
+  }
+  &:after {
+    @apply bg-l1 w-2 h-2 rounded-full absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[10px] max-h-[10px];
+    animation: pulsate 1.8s ease-out infinite;
+  }
+}

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "animation";
 @import "special";
 @import "contact-form";
 @import "buttons";
@@ -120,6 +121,9 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
 // section title 欄位標題
 .section-title {
   @apply font-rc font-bold text-[1.75rem] tracking-wider text-b1 leading-8;
+  .small-num {
+    @apply inline-block w-[1.3rem] ml-2;
+  }
 }
 .section-sub {
   @apply text-xs mt-1 text-b1 tracking-[0.1rem] leading-[1rem];
