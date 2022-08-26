@@ -1,5 +1,6 @@
 import {createApp} from "petite-vue";
 import gsap from "gsap";
+import smallNum from "./js-components/smallNum";
 import "./style/style.scss"
 
 // 全域使用 petite vue
@@ -16,14 +17,18 @@ function carousel () {
         isLast() {
             return this.total && this.current === this.items.length - 1
         },
+        isFirst() {
+            return this.total && this.current === 0
+        },
         next() {
+            console.log(this.container)
             if (this.isRunning || this.current === this.items.length - 1) {
                 // backToZero()
                 return
             }
             this.isRunning = true
-            const currentItem = this.items[this.current]
-            const moveDistance = currentItem.getBoundingClientRect().width
+            const nextItem = this.items[this.current + 1]
+            const moveDistance = nextItem.getBoundingClientRect().left - this.carouselEl.getBoundingClientRect().left
             gsap.to(this.container, {x: `-=${moveDistance}`}).then(() => {
                 this.current++
                 this.isRunning = false
@@ -35,9 +40,8 @@ function carousel () {
                 return
             }
             this.isRunning = true
-            const currentItem = items[current]
             const lastItem = items[current - 1]
-            const moveDistance = lastItem.getBoundingClientRect().width
+            const moveDistance = -(lastItem.getBoundingClientRect().left - this.carouselEl.getBoundingClientRect().left)
             gsap.to(container, {x: `+=${moveDistance}`}).then(() => {
                 this.current--
                 this.isRunning = false
@@ -50,6 +54,10 @@ function carousel () {
             this.container = this.carouselEl.querySelector(".carousel-container")
             this.items = this.container.querySelectorAll(":scope > .carousel-item")
             this.total = this.items.length
+            window.carouselEl = this.carouselEl
+            window.container = this.container
+            window.items = this.items
+            console.log(this.container)
         }
     }
 }
@@ -58,14 +66,6 @@ function arrBtn (props = {}) {
     return {
         $template: '#svg_arrow_button',
         direction: props.direction || "right",
-    }
-}
-
-// 斜線小數字
-function smallNum( num = '01' ) {
-    return {
-        $template: '#small_number',
-        num
     }
 }
 

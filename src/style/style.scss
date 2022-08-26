@@ -133,6 +133,17 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
   @apply font-rc font-bold text-[1.75rem] tracking-wider text-b1 leading-8;
   .small-num {
     @apply inline-block w-[1.3rem] ml-2;
+    path, text {
+      @apply fill-b1;
+    }
+    &.white {
+      path, text {
+        @apply fill-white;
+      }
+    }
+    &.no-num {
+      @apply -ml-1;
+    }
   }
 }
 .section-sub {
