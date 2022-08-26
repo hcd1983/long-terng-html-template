@@ -28,7 +28,7 @@ body{
 }
 
 p {
-  @apply text-xs text-b3 leading-loose;
+  @apply text-xs text-b3 leading-loose tracking-widest;
 }
 
 [v-scope] {
@@ -147,7 +147,15 @@ input[type="text"], input[type="email"], input[type="search"], input[type="tel"]
   }
 }
 .section-sub {
-  @apply text-xs mt-1 text-b1 tracking-[0.1rem] leading-[1rem];
+  @apply text-xs mt-1 text-b1 tracking-widest leading-[1rem];
+}
+
+.sm-title {
+  @apply text-lg leading-[1.8rem] tracking-widest font-medium;
+}
+
+.num-title {
+  @apply font-rc font-light text-[2.625rem] leading-[3.125rem];
 }
 
 // news-list
@@ -172,7 +180,7 @@ ul.news-list {
 
 //slogan
 .slogan {
-  @apply bg-b2 border-b border-b2 flex items-center justify-center text-c1 py-3 px-11 text-xs tracking-[0.1rem] font-medium;
+  @apply bg-b2 border-b border-b2 flex items-center justify-center text-c1 py-3 px-11 text-xs tracking-widest font-medium;
   &.dark {
     @apply bg-c2 border-c2 text-white;
   }

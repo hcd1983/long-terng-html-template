@@ -8,12 +8,33 @@ import "./style/style.scss"
 // 輪播圖
 function carousel () {
     return {
+        descriptionEl: null,
+        descriptions: null,
         carouselEl: null,
         container: null,
         items: null,
         total: 0,
         current:0,
         isRunning: false,
+        beforeCurrentChange() {
+            if (!this.descriptions) return
+            const description = this.descriptions[this.current]
+            gsap.to(description, { opacity: 0}).then(() => {
+                gsap.set(description,{display: 'none'})
+            })
+        },
+        afterCurrentChange() {
+            if (!this.descriptions) return
+            const description = this.descriptions[this.current]
+            gsap.set(description,{display: 'block', opacity:0, y: 20}).then(() => {
+                gsap.to(description, {opacity: 1, y:0})
+            })
+        },
+        setStartDescription () {
+            if (!this.descriptions) return
+            const description = this.descriptions[this.current]
+            gsap.set(description,{display: 'block', opacity:1})
+        },
         isLast() {
             return this.total && this.current === this.items.length - 1
         },
@@ -21,16 +42,17 @@ function carousel () {
             return this.total && this.current === 0
         },
         next() {
-            console.log(this.container)
             if (this.isRunning || this.current === this.items.length - 1) {
                 // backToZero()
                 return
             }
+            this.beforeCurrentChange()
             this.isRunning = true
             const nextItem = this.items[this.current + 1]
             const moveDistance = nextItem.getBoundingClientRect().left - this.carouselEl.getBoundingClientRect().left
             gsap.to(this.container, {x: `-=${moveDistance}`}).then(() => {
                 this.current++
+                this.afterCurrentChange()
                 this.isRunning = false
             })
         },
@@ -39,11 +61,13 @@ function carousel () {
             if (isRunning || current === 0) {
                 return
             }
+            this.beforeCurrentChange()
             this.isRunning = true
             const lastItem = items[current - 1]
             const moveDistance = -(lastItem.getBoundingClientRect().left - this.carouselEl.getBoundingClientRect().left)
             gsap.to(container, {x: `+=${moveDistance}`}).then(() => {
                 this.current--
+                this.afterCurrentChange()
                 this.isRunning = false
             })
         },
@@ -54,10 +78,9 @@ function carousel () {
             this.container = this.carouselEl.querySelector(".carousel-container")
             this.items = this.container.querySelectorAll(":scope > .carousel-item")
             this.total = this.items.length
-            window.carouselEl = this.carouselEl
-            window.container = this.container
-            window.items = this.items
-            console.log(this.container)
+            this.descriptionEl = $el.querySelector("._carousel-descriptions")
+            this.descriptions = this.descriptionEl.querySelectorAll(":scope > .carousel-description")
+            this.setStartDescription()
         }
     }
 }

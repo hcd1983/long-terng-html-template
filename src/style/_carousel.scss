@@ -1,13 +1,24 @@
 ._carousel {
   @apply w-full h-full overflow-hidden;
   .carousel-container {
-    @apply flex flex-nowrap min-w-full w-fit bg-purple-500 h-full gap-5;
+    @apply flex flex-nowrap min-w-full w-fit h-full gap-5;
   }
   .carousel-item {
-    //@apply w-full h-full flex-shrink-0;
-    @apply w-2/3 h-full flex-shrink-0;
+    @apply w-full h-full flex-shrink-0;
     img {
-      @apply w-full h-full object-cover
+      @apply w-full h-full object-cover;
     }
+  }
+}
+
+._carousel-descriptions {
+  @apply relative;
+  .carousel-description {
+    @apply hidden;
+    //@apply hidden opacity-0 transition-opacity duration-500;
+    //&.active {
+    //  @apply opacity-100;
+    //  //animation: carouselFadeIn .5s forwards;
+    //}
   }
 }
