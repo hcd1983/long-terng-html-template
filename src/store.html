@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <include src="./src/components/head-meta.html"></include>
+    <title>Title</title>
+</head>
+<body v-scope class="light-header">
+<include src="./src/components/header.html"></include>
+<!--section title-->
+<section class="relative">
+    <div class="flex relative w-full">
+        <div class="w-[2.875rem] flex items-end"></div>
+        <div class="relative flex-1 h-[27rem]">
+            <img src="./assets/store-head.png" class="overlay object-cover" loading="eager" />
+        </div>
+        <div class="absolute left-6 top-48">
+            <div class="page-title text-b1 -translate-y-2">APPOINTED<br/>STORE</div>
+        </div>
+    </div>
+    <img src="./assets/dog.png" class="absolute left-0 bottom-0 w-[19.375rem]" />
+</section>
+<section class="border-t border-l1 pt-11 pb-14">
+    <div class="container">
+        <div class="grid grid-cols-3 gap-3">
+            <button class="white-btn-small w-full active" >ALL</button>
+            <button class="white-btn-small w-full" >美食</button>
+            <button class="white-btn-small w-full" >美容</button>
+            <button class="white-btn-small w-full" >玩樂</button>
+            <button class="white-btn-small w-full" >購物</button>
+            <button class="white-btn-small w-full" >MAP</button>
+        </div>
+        <include src="./src/components/search-form.html"></include>
+        <!--  store list      -->
+        <div class="grid grid-cols-2 gap-x-3 gap-y-5">
+            <!--  store grid      -->
+            <div class="store-grid">
+                <div class="image-container">
+                    <img src="./assets/store-1.png" />
+                </div>
+                <div class="info">
+                    <h3>BG 韓式炸雞</h3>
+                    <h4>楠梓德賢店</h4>
+                </div>
+            </div>
+            <!--  store grid      -->
+            <div class="store-grid">
+                <div class="image-container">
+                    <img src="./assets/store-2.png" />
+                </div>
+                <div class="info">
+                    <h3>BG 韓式炸雞</h3>
+                </div>
+            </div>
+            <!--  store grid      -->
+            <div class="store-grid">
+                <div class="image-container">
+                    <img src="./assets/store-1.png" />
+                </div>
+                <div class="info">
+                    <h3>BG 韓式炸雞</h3>
+                </div>
+            </div>
+            <!--  store grid      -->
+            <div class="store-grid">
+                <div class="image-container">
+                    <img src="./assets/store-2.png" />
+                </div>
+                <div class="info">
+                    <h3>BG 韓式炸雞</h3>
+                </div>
+            </div>
+            <!--  store grid      -->
+            <div class="store-grid">
+                <div class="image-container">
+                    <img src="./assets/store-2.png" />
+                </div>
+                <div class="info">
+                    <h3>BG 韓式炸雞</h3>
+                </div>
+            </div>
+        </div>
+        <!--   scroll list end     -->
+        <div class="to-do mt-[6.25rem]">PAGINATION</div>
+    </div>
+</section>
+<include src="./src/components/footer.html"></include>
+<include src="./src/components/templates.html"></include>
+<script src="./app.js" type="module"  />
+</body>
+</html>
