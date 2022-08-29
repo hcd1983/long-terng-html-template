@@ -1,0 +1,12 @@
+ul.footer-info {
+  @apply text-footer mt-6 grid grid-cols-1 gap-[1.125rem] text-xs;
+  li {
+    @apply flex items-center;
+    div:first-child {
+      @apply w-[4.5rem];
+    }
+    div:last-child {
+      @apply flex-1;
+    }
+  }
+}
