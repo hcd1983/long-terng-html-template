@@ -6,7 +6,6 @@
     "./src/index.html",
     "./src/example.html"
   ],
-  "publicUrl": "/long-terng-html-template/",
   "targets": {
     "default": {
       "distDir": "./dist"
@@ -16,7 +15,7 @@
     "@": "./src"
   },
   "scripts": {
-    "predeploy": "yarn prod --public-url",
+    "predeploy": "yarn prod --public-url /long-terng-html-template/",
     "deploy": "gh-pages -d dist",
     "start": "parcel --dist-dir dev",
     "build": "parcel build",
