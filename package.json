@@ -9,9 +9,6 @@
   "targets": {
     "default": {
       "distDir": "./dist"
-    },
-    "dev": {
-      "distDir": "./dev"
     }
   },
   "alias": {
