@@ -16,7 +16,7 @@
     "@": "./src"
   },
   "scripts": {
-    "predeploy": "yarn prod",
+    "predeploy": "yarn prod --public-url",
     "deploy": "gh-pages -d dist",
     "start": "parcel --dist-dir dev",
     "build": "parcel build",
